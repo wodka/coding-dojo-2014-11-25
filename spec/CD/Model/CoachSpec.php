@@ -19,4 +19,8 @@ class CoachSpec extends ObjectBehavior
     function it_has_seats_valid(){
         $this->shouldThrow(new \Exception())->during('hasSeats', array("4.2<"));
     }
+
+    function it_can_reserve_seats(){
+        $this->reserve(10)->shouldReturn(true);
+    }
 }
