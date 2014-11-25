@@ -62,6 +62,13 @@ doctrine:
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
+        mappings:
+            model:
+                type: annotation
+                dir: "%kernel.root_dir%/../src/CD/Model"
+                prefix: CD\Model
+                alias: Model
+                is_bundle: false
 
 # Swiftmailer Configuration
 swiftmailer:
